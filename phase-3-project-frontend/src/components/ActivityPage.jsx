@@ -4,7 +4,9 @@ import ActivityCard from "./ActivityCard"
 function ActivityPage(){
 
     return(
-        <ActivityCard/>
+        <div>
+            <ActivityCard/>
+        </div>
     )
     
 }
