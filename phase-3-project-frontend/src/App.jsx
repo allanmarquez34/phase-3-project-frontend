@@ -1,7 +1,6 @@
 import React from "react"
 import ActivityPage from "./components/ActivityPage"
-import Favorites from "./components/Favorites"
-import MapPage from "./components/MapPage"
+import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 
 // import { useState } from 'react'
@@ -13,8 +12,7 @@ function App() {
     <div>
       <NavBar/>
       <ActivityPage/>
-      <Favorites/>
-      <MapPage/>
+      <Home/>
     </div>
   )
 }
