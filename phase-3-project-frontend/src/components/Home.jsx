@@ -1,12 +1,12 @@
 import React from "react"
 
-function MapPage(){
+function Home(){
 
     return(
         <div>
-            <h1>Select a State!</h1>
+            <h1>Welcome to Beyond the Boonies</h1>
         </div>
     )
 }
 
-export default MapPage
+export default Home

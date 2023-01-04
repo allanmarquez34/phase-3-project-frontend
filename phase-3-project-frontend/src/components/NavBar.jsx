@@ -7,7 +7,7 @@ function NavBar(){
             <ul>
                 <li>Beyond the Boonies</li>
                 <li>Activites</li>
-                <li>Favorites</li>
+                <li>Create Activity </li>
             </ul>
         </nav>
     )
