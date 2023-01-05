@@ -12,6 +12,9 @@ function App() {
   const [activities, setActivities] = useState([])
 
 
+  function handleAddActivity(newActivity){
+    setActivities([...activities, newActivity])
+  }
 
   useEffect(() => {
     fetch("http://localhost:9292/activities")
@@ -36,7 +39,7 @@ function App() {
             activities={activities}/>
           </Route>
           <Route exact path="/new">
-            <CreateActivity/>
+            <CreateActivity onAddActivity = {handleAddActivity}/>
           </Route>
           {/* <Route >
             <ActivityPage/>
