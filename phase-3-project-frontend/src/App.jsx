@@ -3,7 +3,7 @@ import ActivitiesList from "./components/ActivitiesList"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import CreateActivity from "./components/CreateActivity"
-// import ActivityPage from "./components/ActivityPage"
+import ActivityPage from "./components/ActivityPage"
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 // import './App.css'
@@ -11,6 +11,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 function App() {
   const [activities, setActivities] = useState([])
 
+
+  
 
   function handleAddActivity(newActivity){
     setActivities([...activities, newActivity])
@@ -27,6 +29,7 @@ function App() {
     setActivities(data)
     })
 },[])
+
 
 
 
@@ -47,9 +50,9 @@ function App() {
             <CreateActivity 
             onAddActivity={handleAddActivity}/>
           </Route>
-          {/* <Route >
-            <ActivityPage/>
-          </Route> */}
+          <Route path = "/oneactivity/:id">
+            <ActivityPage />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

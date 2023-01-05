@@ -1,8 +1,9 @@
 import React from "react"
-
+import { useHistory } from "react-router-dom"
 
 function ActivityCard({activities, onActivityDelete}){
     const {id, title, location,image } = activities
+    const history = useHistory()
 
     const handleDeleteClick = () => {
         onActivityDelete(id)
@@ -13,8 +14,12 @@ function ActivityCard({activities, onActivityDelete}){
      
     }
 
+    function handleSingleActivity(){
+        history.push(`/oneactivity/${id}`)
+    }
+
     return(
-        <div>
+        <div onClick = {handleSingleActivity}>
             <ul>
                 <img src={image}/>
                 <li>{title}</li>
