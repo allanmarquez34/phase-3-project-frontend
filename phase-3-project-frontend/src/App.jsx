@@ -16,6 +16,10 @@ function App() {
     setActivities([...activities, newActivity])
   }
 
+  const onActivityDelete = (activityId) => {
+    setActivities(activities => activities.filter(a => a.id !==activityId))
+  }
+
   useEffect(() => {
     fetch("http://localhost:9292/activities")
     .then(r => r.json())
@@ -36,10 +40,12 @@ function App() {
           </Route>
           <Route exact path="/activities">
             <ActivitiesList 
-            activities={activities}/>
+            activities={activities}
+            onActivityDelete ={onActivityDelete}/>
           </Route>
           <Route exact path="/new">
-            <CreateActivity onAddActivity = {handleAddActivity}/>
+            <CreateActivity 
+            onAddActivity={handleAddActivity}/>
           </Route>
           {/* <Route >
             <ActivityPage/>
