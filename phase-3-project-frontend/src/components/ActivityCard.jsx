@@ -1,10 +1,16 @@
 import React from "react"
-import Review from "./Review"
 
-function ActivityCard(){
+
+function ActivityCard({activities}){
 
     return(
-        <Review/>
+        <div>
+            <ul>
+                <img src={activities.image}/>
+                <li>{activities.title}</li>
+                <li>{activities.location}</li>
+            </ul>
+        </div>
     )
 }
 

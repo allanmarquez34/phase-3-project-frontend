@@ -1,13 +1,20 @@
 import React from "react"
+import { Link, NavLink } from "react-router-dom"
 
 function NavBar(){
 
     return(
         <nav>
             <ul>
-                <li>Beyond the Boonies</li>
-                <li>Activites</li>
-                <li>Create Activity </li>
+                <Link to="/">
+                    Beyond the Boonies 
+                </Link>
+                <NavLink exact to="/activities">
+                    Activites
+                </NavLink>
+                <NavLink exact to="/new">
+                    Create Activity
+                </NavLink>
             </ul>
         </nav>
     )

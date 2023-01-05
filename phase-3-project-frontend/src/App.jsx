@@ -1,9 +1,11 @@
 import React from "react"
-import ActivityPage from "./components/ActivityPage"
+import ActivitiesList from "./components/ActivitiesList"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import CreateActivity from "./components/CreateActivity"
+// import ActivityPage from "./components/ActivityPage"
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 // import './App.css'
 
 function App() {
@@ -12,20 +14,35 @@ function App() {
 
 
   useEffect(() => {
-    fetch("")
-    .then(r=> r.json())
+    fetch("http://localhost:9292/activities")
+    .then(r => r.json())
     .then(data => {
-      setActivities(data)
+    setActivities(data)
     })
-  }, [])
+},[])
+
 
 
   return (
     <div>
+      <BrowserRouter>
       <NavBar/>
-      <ActivityPage/>
-      <CreateActivity/>
-      <Home/>
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route exact path="/activities">
+            <ActivitiesList 
+            activities={activities}/>
+          </Route>
+          <Route exact path="/new">
+            <CreateActivity/>
+          </Route>
+          {/* <Route >
+            <ActivityPage/>
+          </Route> */}
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }
