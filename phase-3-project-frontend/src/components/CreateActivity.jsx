@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { useHistory } from "react"
+import { useHistory } from "react-router-dom"
 
 function CreateActivity({onAddActivity}){
-    const [formdata, setFormData] = useState({
+    const [formData, setFormData] = useState({
         title:"",
         description:"",
         location:"",
@@ -11,12 +11,19 @@ function CreateActivity({onAddActivity}){
 
     const history = useHistory()
 
-    function handlesubmit(){
+    function handleChange(event){
+       setFormData({
+        ...formData,
+        [event.target.name]: event.target.value,
+       })
+    }
+
+    function handleSubmit(){
         const newActivity = {
-            title: formdata.title,
-            description: formdata.description,
-            location: formdata.location,
-            image: formdata.image
+            title: formData.title,
+            description: formData.description,
+            location: formData.location,
+            image: formData.image
         }
 
         fetch("http://localhost:9292/new",{
@@ -28,9 +35,45 @@ function CreateActivity({onAddActivity}){
         })
         .then((r) => r.json())
         .then(onAddActivity)
-        history.pushState(`/activities`)
+        history.push(`/activities`)
     }
 
+    return(
+        <section>
+            <form autoComplete="off" onSubmit={handleSubmit}>
+                <h3>Add New Activity</h3>
+                <label>Title</label>
+                <input 
+                id="title"
+                name="title"
+                onChange={handleChange}
+                value={formData.title}/>
+
+                <label>Description</label>
+                <input
+                id="description"
+                name="description"
+                onChange={handleChange}
+                value={formData.description}/>
+
+                <label>Location</label>
+                <input
+                id="location"
+                name="location"
+                onChange={handleChange}
+                value={formData.location}/>
+
+                <label>Image url</label>
+                <input
+                id="image"
+                name="image"
+                onChange={handleChange}
+                value={formData.image}/>
+
+                <button type="submit">Add Activity</button>
+            </form>
+        </section>
+    )
 
 }
 
