@@ -5,9 +5,6 @@ import ReviewList from "./ReviewList";
 
 function ActivityPage(){
     const[activity, setActivity] = useState([])
-    const [review, setReview] = useState([])
-
-
     const { id } = useParams();
 
     useEffect(() => {
@@ -19,13 +16,7 @@ function ActivityPage(){
             })
     }, [id])
 
-    
-       
-  
-    
     const {title, description, location, image } = activity
-
-
 
     return (
         
@@ -39,7 +30,6 @@ function ActivityPage(){
             <ReviewList/>
         </div>
     )
-
 }
 
 export default ActivityPage 

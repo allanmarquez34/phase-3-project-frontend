@@ -3,8 +3,6 @@ import Review from "./Review"
 import ReviewForm from "./ReviewForm";
 import {  useParams } from "react-router-dom";
 
-
-
 function ReviewList(){
     const [reviews, setReview] = useState([])
     const { id } = useParams()
@@ -25,7 +23,6 @@ function ReviewList(){
        return <Review key={review.id} review={review} />
     })
 
-    
     return(
         <div>
         <ul>{reviewList}</ul>

@@ -1,7 +1,5 @@
 import React,{useState} from "react"
 
-
-
 function ReviewForm({onAddReview, id}){
     const [formData, setFormData]= useState({
         rating:"",
@@ -43,7 +41,6 @@ function ReviewForm({onAddReview, id}){
             </form>
         </section>
     )
-
 }
 
 export default ReviewForm

@@ -2,7 +2,6 @@ import React from "react"
 import { useHistory } from "react-router-dom"
 import {  NavLink } from "react-router-dom";
 
-
 function ActivityCard({activities, onActivityDelete, onSelectedActivity}){
     const {id, title, location,image } = activities
     const history = useHistory()
@@ -12,8 +11,6 @@ function ActivityCard({activities, onActivityDelete, onSelectedActivity}){
         fetch(`http://localhost:9292/delete/${id}`,{
             method: "DELETE"
         })
-
-     
     }
 
     function handleSingleActivity(){
@@ -22,7 +19,7 @@ function ActivityCard({activities, onActivityDelete, onSelectedActivity}){
 
     function handleClick() {
         onSelectedActivity(activities);
-      }
+    }
 
     return(
         <div >
@@ -31,7 +28,7 @@ function ActivityCard({activities, onActivityDelete, onSelectedActivity}){
                 <li>{title}</li>
                 <li>{location}</li>
             </ul>
-            <button onClick={handleDeleteClick}>Delete Activity</button>
+                <button onClick={handleDeleteClick}>Delete Activity</button>
             <NavLink exact to={`/${id}/edit`}>
                 <button type="button" className="button-1" onClick={handleClick}>Edit Activity</button>
             </NavLink>

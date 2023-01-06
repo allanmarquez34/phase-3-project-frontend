@@ -13,7 +13,6 @@ function App() {
   const [activities, setActivities] = useState([])
   const [selectedActivty, setSelectedActivity] = useState(null)
 
-
   function handleChangeForm(name, value) {
     setSelectedActivity({
       ...selectedActivty,
@@ -28,8 +27,6 @@ function App() {
     setSelectedActivity(updatedActivity);
     setActivities(updatedActivities);
   }
-
-  
 
   function handleAddActivity(newActivity){
     setActivities([...activities, newActivity])
@@ -47,36 +44,33 @@ function App() {
     })
 },[])
 
-
-
-
   return (
     <div>
       <BrowserRouter>
       <NavBar/>
         <Switch>
-          <Route exact path="/">
-            <Home/>
-          </Route>
-          <Route exact path="/activities">
-            <ActivitiesList 
-            activities={activities}
-            onActivityDelete ={onActivityDelete}
-            onSelectedActivity={setSelectedActivity}/>
-          </Route>
-          <Route exact path="/new">
-            <CreateActivity 
-            onAddActivity={handleAddActivity}/>
-          </Route>
-          <Route path = "/oneactivity/:id">
-            <ActivityPage />
-          </Route>
-          <Route path="/:id/edit" >
-            <EditActivity 
-              activities={selectedActivty}
-              onChangeForm={handleChangeForm}
-              onEditActivity={handleEditActivty}/>
-          </Route>
+            <Route exact path="/">
+                <Home/>
+            </Route>
+            <Route exact path="/activities">
+                <ActivitiesList 
+                activities={activities}
+                onActivityDelete ={onActivityDelete}
+                onSelectedActivity={setSelectedActivity}/>
+            </Route>
+            <Route exact path="/new">
+                <CreateActivity 
+                onAddActivity={handleAddActivity}/>
+            </Route>
+            <Route path = "/oneactivity/:id">
+                <ActivityPage />
+            </Route>
+            <Route path="/:id/edit" >
+                <EditActivity 
+                  activities={selectedActivty}
+                  onChangeForm={handleChangeForm}
+                  onEditActivity={handleEditActivty}/>
+            </Route>
         </Switch>
       </BrowserRouter>
     </div>

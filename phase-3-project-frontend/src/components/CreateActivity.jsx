@@ -43,38 +43,37 @@ function CreateActivity({onAddActivity}){
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <h3>Add New Activity</h3>
                 <label>Title</label>
-                <input 
-                id="title"
-                name="title"
-                onChange={handleChange}
-                value={formData.title}/>
+                    <input 
+                    id="title"
+                    name="title"
+                    onChange={handleChange}
+                    value={formData.title}/>
 
                 <label>Description</label>
-                <input
-                id="description"
-                name="description"
-                onChange={handleChange}
-                value={formData.description}/>
+                    <input
+                    id="description"
+                    name="description"
+                    onChange={handleChange}
+                    value={formData.description}/>
 
                 <label>Location</label>
-                <input
-                id="location"
-                name="location"
-                onChange={handleChange}
-                value={formData.location}/>
+                    <input
+                    id="location"
+                    name="location"
+                    onChange={handleChange}
+                    value={formData.location}/>
 
                 <label>Image url</label>
-                <input
-                id="image"
-                name="image"
-                onChange={handleChange}
-                value={formData.image}/>
+                    <input
+                    id="image"
+                    name="image"
+                    onChange={handleChange}
+                    value={formData.image}/>
 
                 <button type="submit">Add Activity</button>
             </form>
         </section>
     )
-
 }
 
 export default CreateActivity

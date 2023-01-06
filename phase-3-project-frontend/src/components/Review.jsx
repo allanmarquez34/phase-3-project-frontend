@@ -1,13 +1,7 @@
 import React from "react"
 
-
-
 function Review({ review }){
-
     const { rating, content} = review 
-
-   
-
 
     return(
         <section>
@@ -17,7 +11,5 @@ function Review({ review }){
             </ul>
         </section>
     )
-
 }
-
 export default Review
