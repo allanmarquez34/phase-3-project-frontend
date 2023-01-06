@@ -3,10 +3,9 @@ import ActivitiesList from "./components/ActivitiesList"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import CreateActivity from "./components/CreateActivity"
-// import ActivityPage from "./components/ActivityPage"
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-// import './App.css'
+
 
 function App() {
   const [activities, setActivities] = useState([])

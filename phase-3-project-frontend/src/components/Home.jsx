@@ -1,10 +1,27 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
 function Home(){
 
     return(
-        <div>
-            <h1>Welcome to Beyond the Boonies</h1>
+        <div class="mx-20 my-10">
+            <div>
+                <h1 class="text-5xl text-center font-Satisfy">Journey Into The Backwoods...</h1>
+            </div>
+            <div class="break-words m-10">
+                <p class="text-base text-center break-words m-12">
+                    Ever wonder what lies beyond the ordinary? What adventures await past the familiar? 
+                    What else exists in the lesser-known pockets of America aside from cow-tipping?
+                    How said cows actually live? How chickens live?! How overall-clad laypeople chewing on 
+                    a piece of straw live?!?! You've come to the right place.
+                    <br></br>
+                    <br></br>
+                    Beyond The Boonies is a hub for wayward travellers searching for a more provencial experience.
+                    We're here to show you all the countryside and lesser-known places have to offer, and we're eager
+                    to here about your pastoral discoveries as well. Safe travels, dear hayseed voyager. 
+                    We can't wait to see what you do.                 
+                </p>
+            </div>
         </div>
     )
 }

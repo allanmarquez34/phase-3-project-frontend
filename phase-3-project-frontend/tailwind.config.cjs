@@ -5,7 +5,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,jpg}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Satisfy:['Satisfy']
+      }
+      // backgroundImage: {
+      //   'birdhouse': "url('./src/images/birdhouse.jpg')",
+      // },
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
