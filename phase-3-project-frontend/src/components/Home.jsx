@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function Home(){
 
     return(
-        <div class="mx-20 my-10">
+        <div class="mx-20 my-10 bg-white bg-opacity-40 rounded-md">
             <div>
-                <h1 class="text-5xl text-center font-Satisfy">Journey Into The Backwoods...</h1>
+                <h1 class="text-6xl text-center font-Sacramento">Journey Into The Backwoods...</h1>
             </div>
             <div class="break-words m-10">
-                <p class="text-base text-center break-words m-12">
+                <p class="text-center break-words m-12 font-Cormorant text-2xl">
                     Ever wonder what lies beyond the ordinary? What adventures await past the familiar? 
                     What else exists in the lesser-known pockets of America aside from cow-tipping?
                     How said cows actually live? How chickens live?! How overall-clad laypeople chewing on 
