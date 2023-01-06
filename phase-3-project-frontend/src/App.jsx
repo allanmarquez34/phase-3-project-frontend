@@ -4,13 +4,30 @@ import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import CreateActivity from "./components/CreateActivity"
 import ActivityPage from "./components/ActivityPage"
+import EditActivity from "./components/EditActivity"
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 // import './App.css'
 
 function App() {
   const [activities, setActivities] = useState([])
+  const [selectedActivty, setSelectedActivity] = useState(null)
 
+
+  function handleChangeForm(name, value) {
+    setSelectedActivity({
+      ...selectedActivty,
+      [name]: value,
+    });
+  }
+
+  function handleEditActivty(updatedActivity) {
+    const updatedActivities = activities.map((oneActivity) =>
+      oneActivity.id === updatedActivity.id ? updatedActivity : oneActivity
+    );
+    setSelectedActivity(updatedActivity);
+    setActivities(updatedActivities);
+  }
 
   
 
@@ -44,7 +61,8 @@ function App() {
           <Route exact path="/activities">
             <ActivitiesList 
             activities={activities}
-            onActivityDelete ={onActivityDelete}/>
+            onActivityDelete ={onActivityDelete}
+            onSelectedActivity={setSelectedActivity}/>
           </Route>
           <Route exact path="/new">
             <CreateActivity 
@@ -52,6 +70,12 @@ function App() {
           </Route>
           <Route path = "/oneactivity/:id">
             <ActivityPage />
+          </Route>
+          <Route path="/:id/edit" >
+            <EditActivity 
+              activities={selectedActivty}
+              onChangeForm={handleChangeForm}
+              onEditActivity={handleEditActivty}/>
           </Route>
         </Switch>
       </BrowserRouter>
