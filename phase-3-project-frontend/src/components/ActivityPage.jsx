@@ -5,7 +5,7 @@ import ReviewList from "./ReviewList";
 
 function ActivityPage(){
     const[activity, setActivity] = useState([])
-    const [review, setReview] = useState([])
+
 
 
     const { id } = useParams();

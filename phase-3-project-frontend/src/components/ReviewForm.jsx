@@ -36,8 +36,11 @@ function ReviewForm({onAddReview, id}){
 
     return(
         <section>
+            <h2>What are your thoughts?</h2>
             <form onSubmit={handleSubmit}>
+                <h3>rating</h3>
                 <input type="text"  name="rating" placeholder="rating" value={formData.rating} onChange ={handleChange}/>
+                <h3>content</h3>
                 <input type="text"  name="content" placeholder="content" value={formData.content} onChange ={handleChange}/>
                 <button type="submit">add review</button>
             </form>
