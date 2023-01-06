@@ -12,8 +12,10 @@ function ActivitiesList({activities, onActivityDelete, onSelectedActivity}){
     })
 
     return(
-        <div>
-            {mappedActivities}
+        <div class="self-center items-center object-center">
+            <div class="grid grid-cols-2 gap-5 m-10 items-center self-center justify-items-center">
+                {mappedActivities}
+            </div>
         </div>
     )
 }

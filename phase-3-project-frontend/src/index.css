@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    /* position: relative; */
+    background-image: url("./images/lakeroad.jpg");
+    background-size: cover;
+    /* resize: both; */
+    /* background-repeat: no-repeat;
+    background-attachment: scroll; */
+    /* max-width: 100%; */
+}

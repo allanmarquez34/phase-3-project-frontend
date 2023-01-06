@@ -4,18 +4,18 @@ import { Link, NavLink } from "react-router-dom"
 function NavBar(){
 
     return(
-        <nav>
-            <ul>
-                <Link to="/">
+        <nav class="bg-white opacity-60">
+            <div class="mx-8 px-8">
+                <Link to="/" class="text-5xl font-Sacramento px-8">
                     Beyond the Boonies 
                 </Link>
-                <NavLink exact to="/activities">
+                <NavLink exact to="/activities" class="px-8 font-GreatVibes text-3xl">
                     Activites
                 </NavLink>
-                <NavLink exact to="/new">
+                <NavLink exact to="/new" class="px-8 font-GreatVibes text-3xl">
                     Create Activity
                 </NavLink>
-            </ul>
+            </div>
         </nav>
     )
 }

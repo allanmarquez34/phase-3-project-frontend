@@ -33,11 +33,13 @@ function ReviewForm({onAddReview, id}){
     }
 
     return(
-        <section>
-            <form onSubmit={handleSubmit}>
-                <input type="text"  name="rating" placeholder="rating" value={formData.rating} onChange ={handleChange}/>
-                <input type="text"  name="content" placeholder="content" value={formData.content} onChange ={handleChange}/>
-                <button type="submit">add review</button>
+        <section class="self-center text-center justify-center items-center origin-center place-items-center">
+            <form onSubmit={handleSubmit} class="self-center text-center justify-center items-center origin-center place-items-center">
+                <input class="font-BreeSerif text-xl text-center" type="text"  name="rating" placeholder="Rating" value={formData.rating} onChange ={handleChange}/>
+                <br></br>
+                <input class="font-BreeSerif text-xl text-center" type="text"  name="content" placeholder="Review" value={formData.content} onChange ={handleChange}/>
+                <br></br>
+                <button type="submit" class="text-center bg-white rounded font-Parisienne text-2xl border-black border-2">Add Review!</button>
             </form>
         </section>
     )

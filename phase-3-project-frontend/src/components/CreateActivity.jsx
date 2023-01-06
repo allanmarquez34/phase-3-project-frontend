@@ -39,40 +39,59 @@ function CreateActivity({onAddActivity}){
     }
 
     return(
-        <section>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <h3>Add New Activity</h3>
-                <label>Title</label>
-                    <input 
-                    id="title"
-                    name="title"
-                    onChange={handleChange}
-                    value={formData.title}/>
-
-                <label>Description</label>
-                    <input
-                    id="description"
-                    name="description"
-                    onChange={handleChange}
-                    value={formData.description}/>
-
-                <label>Location</label>
-                    <input
-                    id="location"
-                    name="location"
-                    onChange={handleChange}
-                    value={formData.location}/>
-
-                <label>Image url</label>
-                    <input
-                    id="image"
-                    name="image"
-                    onChange={handleChange}
-                    value={formData.image}/>
-
-                <button type="submit">Add Activity</button>
+        <div class="self-center object-center items-center m-20 content-center place-content-center place-items-center">
+            <div class="self-center object-center items-center text-center">
+                <form autoComplete="off" onSubmit={handleSubmit} class="self-center items-center object-center content-center justify-center place-items-center">
+                    <p class="text-center content-center font-Sacramento text-5xl">Add New Activity</p>
+                    <br></br>
+                    <label class="text-center bg-white opacity-60 rounded font-Parisienne text-2xl">Title</label>
+                    <br></br>
+                    <br></br>
+                        <input 
+                    class=""
+                        id="title"
+                        name="title"
+                        onChange={handleChange}
+                        value={formData.title}/>
+                    <br></br>
+                    <br></br>
+                    <label class="text-center bg-white opacity-60 rounded font-Parisienne text-2xl">Description</label>
+                    <br></br>
+                    <br></br>
+                        <input
+                    class="h-48"
+                        id="description"
+                        name="description"
+                        onChange={handleChange}
+                        value={formData.description}/>
+                    <br></br>
+                    <br></br>
+                    <label class="text-center bg-white opacity-60 rounded font-Parisienne text-2xl">Location</label>
+                    <br></br>
+                    <br></br>
+                        <input
+                    class=""
+                        id="location"
+                        name="location"
+                        onChange={handleChange}
+                        value={formData.location}/>
+                    <br></br>
+                    <br></br>
+                    <label class="text-center bg-white opacity-60 rounded font-Parisienne text-2xl">Image url</label>
+                    <br></br>
+                    <br></br>
+                        <input
+                    class=""
+                        id="image"
+                        name="image"
+                        onChange={handleChange}
+                        value={formData.image}/>
+                    <br></br>
+                    <br></br>
+                    <button type="submit" class="text-center bg-white rounded font-Parisienne text-2xl border-black border-2">Add Activity</button>
             </form>
-        </section>
+            </div>
+        </div>
     )
 }
 

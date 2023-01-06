@@ -5,7 +5,25 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,jpg}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Satisfy:['Satisfy'],
+        CormorantGaramond:['Cormorant Garamond'],
+        Cinzel:['Cinzel'],
+        Tangerine:['Tangerine'],
+        Parisienne:['Parisienne'],
+        BodoniModa:['Bodoni Moda'],
+        Sacramento:['Sacramento'],
+        Cormorant:['Cormorant'],
+        GreatVibes:['Great Vibes'],
+        PassionsConflict:['Passions Conflict'],
+        BreeSerif:['Bree Serif'],
+        Courgette:['Courgette']
+      }
+      // backgroundImage: {
+      //   'birdhouse': "url('./src/images/birdhouse.jpg')",
+      // },
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

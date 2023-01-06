@@ -7,7 +7,7 @@ import ActivityPage from "./components/ActivityPage"
 import EditActivity from "./components/EditActivity"
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-// import './App.css'
+
 
 function App() {
   const [activities, setActivities] = useState([])
